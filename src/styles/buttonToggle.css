@@ -1,0 +1,29 @@
+.container__btn-toggle {
+  width: 36px;
+  height: 18px;
+  border-radius: 25px;
+  background-color: grey;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  transition: all 0.1s;
+}
+
+.container__btn-toggle > button {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+
+  transition: all 0.1s;
+}
+
+.btn-toggle-selected {
+  transform: translateX(18px);
+}
+
+.container__btn-toggle-selected {
+  background-color: black;
+}

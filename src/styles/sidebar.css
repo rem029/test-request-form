@@ -1,0 +1,28 @@
+.sidebar {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  min-width: 90px;
+  max-width: 250px;
+  height: 100vh;
+  border-radius: 0 25px 25px 0;
+  border: 2px solid;
+  border-color: inherit;
+  transform: translateX(-1000px);
+  transition: all 0.8s;
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.sidebar > nav {
+  padding: 50px 5px;
+}
+
+.sidebar > nav > ul {
+  margin: 5px;
+  list-style: none;
+}

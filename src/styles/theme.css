@@ -1,0 +1,11 @@
+.theme-dark-grey {
+  background-color: #646464;
+  color: white;
+  border-color: #aaaaaa;
+}
+
+.theme-light-grey {
+  background-color: #c2c2c2;
+  color: black;
+  border-color: #a0a0a0;
+}

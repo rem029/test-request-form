@@ -1,0 +1,22 @@
+li {
+  margin: 20px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li > a:hover {
+  border-bottom: 2px solid;
+  border-color: inherit;
+}
+
+.link-active {
+  border-bottom: 2px solid;
+  border-color: inherit;
+}

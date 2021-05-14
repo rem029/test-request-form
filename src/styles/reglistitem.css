@@ -1,0 +1,18 @@
+.register-list-item {
+  position: relative;
+  padding: 15px;
+}
+.register-list-item > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: inherit;
+  font-size: 18px;
+}
+
+.register-list-item > h2,
+h3,
+p {
+  margin: 5px;
+}
