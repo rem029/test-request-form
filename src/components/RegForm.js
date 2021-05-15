@@ -20,6 +20,7 @@ import '../styles/regform.css';
 const RegForm = (props) => {
   const contextGlobal = useContext(ContextGlobal);
   const [registerError, setRegisterError] = useState('');
+  const [registerSuccess, setRegisterSuccess] = useState('');
   const [loading, setLoading] = useState(false);
   const [registrationInfo, setRegistrationInfo] = useState({
     firstname: '',
@@ -37,6 +38,7 @@ const RegForm = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
     setRegisterError('');
+    setRegisterSuccess('');
     setLoading(true);
 
     if (
@@ -52,6 +54,7 @@ const RegForm = (props) => {
         .post('https://test-bin-yousef-default-rtdb.firebaseio.com/registers.json', { ...registrationInfo })
         .then((res) => {
           console.log('REGISTER RESPONSE', res);
+          setRegisterSuccess('Successfully Registered');
           setLoading(false);
         })
         .catch((error) => {
@@ -209,6 +212,7 @@ const RegForm = (props) => {
         </div>
 
         {registerError.length > 0 && <p className="error-message">{registerError}</p>}
+        {registerSuccess.length > 0 && <p>{registerSuccess}</p>}
 
         <div className="form_registration__control_button">
           <button

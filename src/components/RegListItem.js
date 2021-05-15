@@ -13,13 +13,14 @@ const RegListItem = (props) => {
   const onDelete = () => {
     axios
       .delete(`https://test-bin-yousef-default-rtdb.firebaseio.com/registers/${registerID}.json`)
-      .then((res) => console.log('SUCCESS', res))
+      .then((res) => {
+        props.refreshData();
+        console.log('SUCCESS', res);
+      })
       .catch((error) => {
+        props.refreshData();
         console.log('ERROR', error);
       });
-    setTimeout(() => {
-      props.refreshData();
-    }, 1000);
   };
 
   return (

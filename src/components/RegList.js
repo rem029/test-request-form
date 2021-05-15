@@ -54,7 +54,7 @@ const RegList = (props) => {
         <React.Fragment>
           {registers.map((register) => {
             return (
-              <RegListItem key={register[0]} id={register[0]} register={register[1]} refreshData={onRefreshData} />
+              <RegListItem key={register[0]} id={register[0]} register={register[1]} refreshData={refreshRegister} />
             );
           })}
         </React.Fragment>
