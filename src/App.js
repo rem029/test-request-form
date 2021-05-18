@@ -60,7 +60,7 @@ function App() {
           sideBarToggle: onToggleSideBar,
         }}
       >
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename={`/${process.env.PUBLIC_URL}`}>
           <SideBar />
           <Header />
 
@@ -74,7 +74,7 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
-            <Route exact path="/">
+            <Route exact path="">
               {LogInInfo ? <Redirect to="/register" /> : <Redirect to="/login" />}
             </Route>
             <Route component={Login} />
