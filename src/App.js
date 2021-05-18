@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
-import Header from './components/Header';
-import Login from './components/Login';
-import RegForm from './components/RegForm';
-import RegList from './components/RegList';
-import SideBar from './components/Sidebar';
+import Header from "./components/Header";
+import Login from "./components/Login";
+import RegForm from "./components/RegForm";
+import RegList from "./components/RegList";
+import SideBar from "./components/Sidebar";
 
-import ContextGlobal from './context/ContextGlobal';
+import ContextGlobal from "./context/ContextGlobal";
 
-import './App.css';
-import './styles/theme.css';
-import './styles/button.css';
+import "./App.css";
+import "./styles/theme.css";
+import "./styles/button.css";
 
 function App() {
   const [theme, toggleTheme] = useState(false);
   const [LogInInfo, setLoginInfo] = useState(null);
   const [sideBar, toggleSideBar] = useState(false);
-  const [activeLink, setStateActiveLink] = useState('login');
+  const [activeLink, setStateActiveLink] = useState("login");
 
   const onThemeToggle = (e) => {
     e.preventDefault();
@@ -39,11 +39,11 @@ function App() {
   };
 
   if (theme) {
-    document.body.classList.add('theme-light-grey');
-    document.body.classList.remove('theme-dark-grey');
+    document.body.classList.add("theme-light-grey");
+    document.body.classList.remove("theme-dark-grey");
   } else {
-    document.body.classList.add('theme-dark-grey');
-    document.body.classList.remove('theme-light-grey');
+    document.body.classList.add("theme-dark-grey");
+    document.body.classList.remove("theme-light-grey");
   }
   return (
     <div className="App">
@@ -60,7 +60,7 @@ function App() {
           sideBarToggle: onToggleSideBar,
         }}
       >
-        <Router basename="/">
+        <Router basename={process.env.PUBLIC_URL}>
           <SideBar />
           <Header />
 
